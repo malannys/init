@@ -1,0 +1,5 @@
+systemctl status sshd
+
+# Debian 8+
+# for Debian 7 : service ssh status
+# systemctl to introspect and state the systemd system and service manager

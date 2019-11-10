@@ -1,0 +1,23 @@
+#!/bin/bash
+# goes through the list of dirs and shows <=10 most space consuming subdirs
+# if there are arguments => goes through the args
+# else goes through the default list DIRS
+
+if [ -n "$1" ]
+then
+	DIRS="$@"
+else
+	DIRS="/home /var/log"
+fi
+echo "Top 10 (or less) disk space usage among the dirs $DIRS"
+for DIR in $DIRS
+do
+	if [ -d "$DIR" ]
+	then
+		printf "\nDirectory $DIR:\n"
+		du -h $DIR 2>/dev/null | sort -rn | head -10 |
+			awk '{print $2 "\t" $1}' | column -t
+	else
+		printf "\nDirectory \"$DIR\" doesn't exist.\n"
+	fi
+done

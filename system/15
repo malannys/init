@@ -1,0 +1,4 @@
+sudo kill PID
+
+# pgrep process
+# with flag -9

@@ -1,0 +1,4 @@
+dpkg -l
+
+# dpkg-query -l
+# sudo apt list --installed

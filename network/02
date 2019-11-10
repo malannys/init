@@ -1,0 +1,13 @@
+# command with -f6 for identifying broadcast address
+# -f2,4 - for IP addresses belonging to the same subnet 
+# for existing IP nmap, arp -a, ping can be helpful
+
+
+brc=`ifconfig en0 | grep 'inet ' | cut -d' ' -f6`
+printf "broadcast address: $brc\n"
+#ifconfig en0 | grep 'inet '
+
+ping -c12 $brc | grep "bytes from" | awk '{print $4}' | sed 's/://'  >/dev/null 2>&1
+arp -a | awk '{print $2}' | grep 192.168
+
+# with nmap: nmap -sn 192.168.1.0/24

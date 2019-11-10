@@ -1,0 +1,4 @@
+~/.ssh/authorized_keys
+
+# can be actually specified when generated
+# Rivest, Shamir, Adleman - public-key algo

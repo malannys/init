@@ -1,0 +1,4 @@
+way 1.	su - user
+		enter pwd
+way 2.	ssh user@ip_address
+		enter pwd

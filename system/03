@@ -1,0 +1,8 @@
+/etc/hostname
+
+# then:
+# 1. update entries in the /etc/hosts
+# 2. apply changes:
+# invoke-rc.d hostname.sh start
+# or
+# /etc/init.d/hostname.sh start

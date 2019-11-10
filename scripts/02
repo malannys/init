@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ -n "$1" ]
+then
+	user="$1"
+	check_user=`cat /etc/passwd | grep "$user"`
+	if [ -n "check_user" ]
+	then
+		processes=`pgrep -u "$user" 2>/dev/null`
+		for PID in $processes
+		do
+			echo "$PID"
+			sudo kill -9 "$PID"
+		done
+		sudo userdel -rf "$user"
+		echo "User is deleted."
+	else
+		echo "User not found."
+	fi
+else
+	echo "Please, pass username as an argument."
+fi

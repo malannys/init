@@ -1,0 +1,5 @@
+# Network Address Translation
+# router configured fo NAT - it remaps the local IP to a public IP
+# second line in the traceroute output
+
+NAT server

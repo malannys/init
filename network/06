@@ -1,0 +1,4 @@
+# resolver configuration file
+# resolver - set of routines to access internet dns 
+
+/etc/resolv.conf

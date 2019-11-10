@@ -1,0 +1,3 @@
+# query external DNS server - 8.8.8.8
+
+nslookup slash16.org 8.8.8.8
