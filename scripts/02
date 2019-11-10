@@ -4,7 +4,7 @@ if [ -n "$1" ]
 then
 	user="$1"
 	check_user=`cat /etc/passwd | grep "$user"`
-	if [ -n "check_user" ]
+	if [ -n "$check_user" ]
 	then
 		processes=`pgrep -u "$user" 2>/dev/null`
 		for PID in $processes
