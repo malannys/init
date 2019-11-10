@@ -11,3 +11,5 @@ ping -c12 $brc | grep "bytes from" | awk '{print $4}' | sed 's/://'  >/dev/null 
 arp -a | awk '{print $2}' | grep 192.168
 
 # with nmap: nmap -sn 192.168.1.0/24
+#
+# actually just command ifconfig en0 can be used, all range of the IPs we can get from the Netmask
