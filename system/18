@@ -1,1 +1,4 @@
-sudo systemctl stop ssh
+# sudo systemctl stop ssh
+# sudo apt-get install psmisc
+
+sudo killall sshd
